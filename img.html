@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <body background="sequia.jpg"></body>
+
+ <style>
+  .enlace {
+    color: #F44336;
+    text-decoration:none;
+  }
+  
+  
+  </style>
+  
+  
+    <style>
+    .slider {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+    .central img {
+      width: 200px;
+      height: auto;
+    }
+    .Flecha_izq, .Flecha_der {
+      cursor: pointer;
+    }
+    .Flecha_izq img, .Flecha_der img {
+      width: 50px; 
+      height: auto;
+    }
+  </style>
+</head>
+<body bgcolor="black">
+  <center><H2> CONSECUENCIAS DEL MAL CUIDADO DEL AGUA</H2>
+    
+    <fieldset>
+    <div class="slider">
+    <div class="Flecha_izq" onclick="MoverIzquierda()">
+      <img src="izquirda.jpeg" alt="Flecha Left">
+    </div>
+    <div class="central">
+      <img name="imagen" alt="Central Image">
+    </div>
+    <div class="Flecha_der" onclick="MoverDerecha()">
+      <img src="derecha.png" alt="Flecha Right">
+    </div>
+  </div>
+  <p id="contador"> contador </p>
+  <script>
+    var imagenes = ["animal.jpg", "lago.jpg", "partido.jpg", "sequia.jpg"];
+    document.imagen.src = imagenes[0];
+    var Contador = 0;
+    document.querySelector("#contador").innerHTML = Numeroimagen= {Contador};
+
+    function MoverIzquierda() {
+      Contador--;
+      if (Contador < 0) {
+        Contador = imagenes.length - 1;
+      }
+      document.querySelector("#contador").innerHTML = Numeroimagen= {Contador};
+      document.imagen.src = imagenes[Contador];
+    }
+
+    function MoverDerecha() {
+      Contador++;
+      if (Contador >= imagenes.length) {
+        Contador = 0;
+      }
+      document.querySelector("#contador").innerHTML = Numeroimagen= {Contador};
+      document.imagen.src = imagenes[Contador];
+    }
+
+    var Intervalo = setInterval(MoverIzquierda, 3000);
+   </script>
+    </fieldset>
+    <fieldset>
+      
+     <font color="white"> <legend><H2><I> REFLEXION</I></H2></legend></font>
+      <font color="">    
+      <h3> El agua, recurso vital y finito, constituye <br>
+      el cimiento de la vida y la prosperidad en <br>
+      nuestro planeta. Su conservación no solo es<br>
+      una responsabilidad individual, sino una <br>
+      obligación colectiva que demanda conciencia<br>
+      y acción inmediata. La escasez de agua afecta<br>
+      a millones, exacerbada por el cambio climático,<br>
+      la contaminación y la sobreexplotación de <br>
+      fuentes hídricas. Es imperativo adoptar prácticas sostenibles, como el uso racional, la <br>
+      recolección de agua de lluvia y el tratamiento<br>
+      adecuado de aguas residuales. La educación <br>
+      ambiental y la implementación de políticas públicas eficientes son cruciales para garantizar<br>
+      el acceso equitativo a este recurso esencial.<br>
+      Solo mediante un compromiso firme y acciones <br>
+      concretas podemos asegurar que las futuras <br>
+      generaciones disfruten de un mundo donde el <br>
+      agua no sea un lujo, sino un derecho garantizado para todos.
+      </h3>
+      </font>
+    </font>
+      </main>
+    <center><img style="border:5px solid; color: black;" src="sequia.jpg" width=" 200" height="150"/>
+
+    </fieldset> 
+    <a href="danger.html">
+      <button class="btn-12"><span> INICIO </span></button>
+    
+    </a> 
+</body>
+</html>
